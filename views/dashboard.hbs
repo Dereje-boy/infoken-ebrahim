@@ -1,0 +1,196 @@
+<!--<div class="main-container">-->
+<!--    {{{username}}}-->
+<!--    {{{fullname}}}-->
+<!--</div>-->
+
+<nav class="navbar navbar-light  navbar-expand-lg bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand align-items-center d-flex fs-5 text-primary fw-bold" href="../">
+            <img src="/images/homepage/infoken_logo.png" alt="" width="auto" height="40"
+                 class="d-inline-block align-text-top">
+            Infoken App
+        </a>
+
+        <a href="../logout" class=" text-decoration-none admin-info d-flex flex-row">
+            <img class="border border-2 p-0 rounded-3 rounded-circle bg-white"
+                 src="images/homepage/user.png" alt="admin photo" width="60" height="60">
+            <div class="info d-flex flex-column justify-content-center ps-3">
+                <h1 class="fs-6 fw-bold text-primary">{{{username}}}</h1>
+                <h1 class="fs-6 fw-bold text-primary">"{{{fullname}}}"
+                    <i><strong>LOGOUT</strong></i></h1>
+            </div>
+        </a>
+
+    </div>
+</nav>
+
+<div class="main-container d-flex flex-row">
+
+    <div class="table-searchbar w-75 d-flex flex-column mb-2">
+
+        <div class="search-bar w-100 border-dark ms-2 py-1 pe-3
+d-flex gap-4 ">
+            <select id="select-db" class=" px-2 bg-white  text-black border border-0"
+                    aria-label="Default select example">
+                <option value="students">Students</option>
+                <option value="books">Books</option>
+                <option value="rents" selected>Rents</option>
+                <option value="admins">Admins</option>
+            </select>
+
+            <input id="search" type="text" class="text-black flex-grow-1 fs-5 form-text  border
+            border-primary border-0
+            border-3 border-bottom"
+                   placeholder="search..." style="outline: none">
+
+            <select id="search-key" class=" px-2 bg-white text-black border border-0"
+                    aria-label="Default select example">
+                <option value="firstname" selected>Firstname</option>
+                <option value="lastname">Lastname</option>
+                <option value="studentID">Student ID</option>
+                <option value="department">Department</option>
+            </select>
+
+            <button id="btn-search" class="btn btn-primary border border-0">Search...</button>
+
+
+        </div>
+
+        <!--        Table container-->
+
+        <div class="table-container w-100 p-3 mt-3">
+
+            <table id="student-table" class=" table border border-3 table-hover
+            px-3 " style="cursor:pointer;">
+                <tr id="tr-head" class="w-100 fs-5 border border-0 border-bottom border-2 " style="cursor:default;">
+                    <th class="">Firstname</th>
+                    <th class="">Lastname</th>
+                    <th class="">Student ID</th>
+                    <th class="">Department</th>
+                    <th class="">Gender</th>
+                    <th class="">Dorm</th>
+                    <th class="">Phone Number</th>
+
+                    <th class="">Registrar ID</th>
+                    <th class="">IS_ID</th>
+                    <th class="">Photo Location</th>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="side-bar w-25 border-dark d-flex flex-column">
+        <!--    firstname    -->
+        <div class="firstname-detail d-flex flex-column  mb-2  px-1">
+            <p class="firstname fs-5 mb-0 ">Firstname</p>
+            <input id="firstname-edit" type="text" class="form-text fw-bold text-black fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    lastname    -->
+        <div class="firstname-detail d-flex flex-column  mb-2  px-1">
+            <p class="lastname fs-5 mb-0">Lastname</p>
+            <input id="lastname-edit" type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    student ID    -->
+        <div class="student ID-detail d-flex flex-column  mb-2  px-1">
+            <p class="student ID fs-5 mb-0">student ID</p>
+            <input id="studentID-edit" type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    Department    -->
+        <div class="Department-detail d-flex flex-column  mb-2  px-1">
+            <p class="Department fs-5 mb-0">Department</p>
+            <input id="department-edit" type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    Gender    -->
+        <div class="Gender-detail d-flex flex-column  mb-2  px-1">
+            <p class="Gender fs-5 mb-0">Gender</p>
+            <input id="gender-edit" type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    dorm    -->
+        <div class="dorm-detail d-flex flex-column  mb-2  px-1">
+            <p class="dorm fs-5 mb-0">Dorm</p>
+            <input id="dorm-edit" type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    Phone Number    -->
+        <div class="Phone Number-detail d-flex flex-column  mb-2  px-1">
+            <p class="Phone Number fs-5 mb-0">Phone Number</p>
+            <input id="phoneNumber-edit" type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    registrar ID    -->
+        <div class="registrarID-detail d-flex flex-column  mb-2  px-1">
+            <p class="registrar-ID fs-5 mb-0">Registrar ID</p>
+            <input id="registrarID-edit" type="text" disabled class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    IS_ID    -->
+        <div class="IS_ID-detail d-flex flex-column  mb-2  px-1">
+            <p class="IS_ID fs-5 mb-0">IS_ID</p>
+            <input id="IS_ID-edit" type="text" disabled class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    student Photo    -->
+        <div class="studentPhoto-detail d-flex flex-column  mb-2  px-1">
+            <p class="studentPhoto fs-5 mb-0">student Photo</p>
+            <input id="studentPhoto-edit" disabled type="text" class="form-text fw-bold text-black
+            fs-4 border border-primary border-2  border-0 border-bottom px-2 me-3"/>
+
+        </div>
+        <!--    Buttons    -->
+        <div class="w-100 d-flex flex-row justify-content-evenly p-2 gap-1">
+            <!--            <button id="btnEditMode" class="btn-dark fs-5 p-2">Edit Mode</button>-->
+
+            <button id="btnUpdate" class="  btn-primary fs-5 p-2 px-4 border rounded-end">Update</button>
+            <button id="btnDelete" class=" btn-danger fs-5 p-2 px-4  border rounded-end">Delete</button>
+        </div>
+
+    </div>
+</div>
+
+<!--new Buttons student, book, rent and admin-->
+<div class="new-buttons d-flex w-75 justify-content-evenly position-fixed bottom-0 ">
+    <div class="new-student m-2">
+        <a href="../students/new" class="btn btn-primary">
+            <h1 class="fs-5">New Student</h1>
+        </a>
+    </div>
+    <div class="new-book m-2">
+        <a href="../books/new" class="btn btn-primary">
+            <h1 class="fs-5">New Book</h1>
+        </a>
+    </div>
+    <div class="new-rent m-2">
+        <a href="../rents/new" class="btn btn-primary">
+            <h1 class="fs-5">New Rent</h1>
+        </a>
+    </div>
+    <div class="new-admin m-2">
+        <a href="../admins/new" class="btn btn-primary">
+            <h1 class="fs-5">New Admin</h1>
+        </a>
+    </div>
+
+</div>
+
+
+<!--Dashboard jquery files-->
+<script src="script/dashboard/dashboard.js"></script>
+<script src="script/dashboard/renderStudents.js"></script>
+<script src="script/dashboard/updateDeleteStudent.js"></script>
+<script src="script/dashboard/booksDatabase.js"></script>

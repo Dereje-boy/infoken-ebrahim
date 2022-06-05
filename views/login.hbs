@@ -1,0 +1,50 @@
+<div class="main-container d-flex w-100 vh-100
+justify-content-center align-items-center flex-column" >
+
+    <div class="card border-white border-1 d-flex align-items-center shadow-lg
+    justify-content-center pt-3 "
+         style="width: 600px;">
+        <h1 class="fs-1 text-dark fw-bold mb-3">Login to Infoken</h1>
+
+        <form action="login" method="post" class="d-flex flex-column
+        justify-content-evenly p-3 gap-4" >
+
+            <div class="emails d-flex flex-row justify-content-center align-items-center
+            gap-4 ">
+<!--                <label for="username" class="fs-4 form-label">Username</label>-->
+                <img src="/images/login/username.png" alt="username logo">
+                <input id="username" name="username" type="text"
+                      placeholder="username" class="fs-4 form-control " >
+            </div>
+
+            <div class="password d-flex flex-row justify-content-center align-items-center
+            gap-4 ">
+<!--                <label for="password" class="fs-4 form-label">Password  </label>-->
+                <img src="/images/login/password.png" alt="password logo">
+                <input id="password" name="password" type="password"
+                      placeholder="password" class="fs-4 form-control" >
+            </div>
+
+            <div class="message d-flex flex-row justify-content-center align-items-center
+            gap-4 ">
+                <p class="fs-5">
+                    {{{message}}}
+                </p>
+            </div>
+
+            <div class="buttons d-flex flex-row justify-content-center align-items-center
+            gap-4 ">
+                <a href="/" type="submit" class="btn bg-white border-secondary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<script src="../js/bootstrap.js"></script>
+<script src="../jquery/jquery.js"></script>

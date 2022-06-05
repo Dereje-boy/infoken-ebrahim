@@ -1,0 +1,16 @@
+use nodemysql;
+show tables;
+
+drop table rents;
+
+create table rents(
+    IS_ID integer not null ,
+    IB_ID integer not null ,
+    IA_ID integer not null ,
+    dateRented DATETIME default CURRENT_TIMESTAMP,
+    isReturned boolean default false,
+    IR_ID integer AUTO_INCREMENT,
+    primary key (IR_ID)
+)
+
+insert into rents (IS_ID, IB_ID, IA_ID) values (191,2,1);

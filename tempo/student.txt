@@ -1,0 +1,46 @@
+show databases ;
+use nodemysql;
+show tables ;
+select  * from students;
+create table students (firstname varchar(255) not null
+                      ,lastname varchar(255) not null
+                      ,studentID varchar(255) not null
+                      ,department varchar(255) not null
+                      ,gender char(1)
+                      ,dorm varchar(255) not null
+                      ,phoneNumber varchar(255)
+                      ,registrarID integer not null
+                      ,IS_ID integer auto_increment, primary key (IS_ID));
+
+show tables ;
+select *
+from students;
+
+insert into students (firstname, lastname, studentID, department, gender, dorm, phoneNumber, registrarID)
+values ("Dereje","Gezahegn","Ramit/390/10","Surveying",'m',"Block NB-9 209","+251922983092",1);
+
+update students
+set firstname = "Dere", lastname="Boy", studentID = "NSR/2039/13"
+where IS_ID = 2;
+
+delete from students where IS_ID = 9;
+
+select *
+from students where firstname = "Dereje";
+
+desc students;
+
+update students set firstname="John", lastname="Mike" where IS_ID= 11;
+
+update students set newFirstname = 'Dere' , newLastname = 'Dere'  where studentID = 'Ramit/303/10';
+update students set firstname = 'Dere21'  where studentID = 'Ramit/303/10'
+
+#coming from webstorm
+update students set firstname = 'Beki'  , lastname = 'Germa'  where studentID = 'Ramit/303/10'
+
+select * from students where studentID like "%100%";
+
+delete from students where IS_ID = 20;
+
+insert into students (firstname, lastname, studentID, department, gender, dorm, phoneNumber, registrarID,IS_ID)
+VALUES ("Derenew","boy new","Ramit/399/10","new Dept","M","new Dorm","0988990033",3,191);

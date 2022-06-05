@@ -1,0 +1,56 @@
+<div class="main-container d-flex flex-column justify-content-center w-100 align-items-center
+         m-4">
+    <h1 class="fs-2 fw-bold justify-content-center ">Adding new student</h1>
+
+
+    <form class="new-container fs-4 w-25" method="post" action="">
+
+        <div class="message align-self-center">
+
+            <p class="text-danger">{{{message}}}</p>
+        </div>
+
+        <div class="firstname">
+            <label for="firstname" class="form-label">Firstname</label>
+            <input id="firstname" type="text" class="form-control" placeholder="Abebe" name="firstname">
+        </div>
+        <div class="lastname">
+            <label for="lastname" class="form-label">Lastname</label>
+            <input id="lastname" type="text" class="form-control" placeholder="Kebede" name="lastname">
+        </div>
+        <div class="studentID">
+            <label for="studentID" class="form-label">Student ID</label>
+            <input id="studentID" type="text" class="form-control" placeholder="Ramit/409/10" name="studentID">
+        </div>
+        <div class="department">
+            <label  for="department" class="form-label">Department</label>
+            <input id="department" type="text" class="form-control" placeholder="Surveying Engineering" name="department">
+        </div>
+        <div class="gender">
+            <label for="gender" class="form-label">Gender</label>
+            <select id="gender" type="text" class="form-control" name="gender">
+                <option name="Male">Male</option>
+                <option name="Female">Female</option>
+            </select>
+        </div>
+        <div class="dorm">
+            <label for="dorm" class="form-label">Dorm</label>
+            <input id="dorm" type="text" class="form-control" placeholder="Block 319 - 301" name="dorm">
+        </div>
+        <div class="phoneNumber">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input id="phoneNumber" type="text" class="form-control" placeholder="+251911001100" name="phoneNumber">
+        </div>
+        <div class="button d-flex flex-row justify-content-center gap-4 mt-3">
+            <a href="../../dashboard"  class="form-control btn btn-danger" value="Cancel">Cancel</a>
+            <input id="btn-submit" type="submit" class="form-control btn btn-primary" value="Add Student">
+        </div>
+    </form>
+
+</div>
+
+
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<script src="../js/bootstrap.js"></script>
+<script src="../jquery/jquery.js"></script>
+<script src="../script/newStudent/newStudent.js"></script>
